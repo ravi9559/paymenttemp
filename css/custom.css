@@ -1,0 +1,28 @@
+      
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #0062FF;
+            color: white;
+            padding: 10px 0;
+        }
+        footer {
+            background-color: #111111;
+            color: #AEAEAE;
+            padding: 20px 0;
+        }
+        .fcta{
+            background-color: #0062FF;
+            color: white;
+
+        } 
+
+
+
+        .fcta:hover{
+            background-color:  #004CC5;
+            color: white;
+
+        } 
+       
