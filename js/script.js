@@ -1,25 +1,48 @@
+// Fetch data using the  API/or db connection
+fetch("")
+  .then((response) => response.json())
+  .then((data) => {
+    //client information section with fetched data
+    console.log(data);
+    const clientInfoDiv = document.getElementById("client-info");
 
+    data.forEach((client) => {
+      const clientDiv = document.createElement("tbody");
+      clientDiv.innerHTML = `
 
-    // Fetch data using the  API/or db connection 
-    fetch('https://dummyjson.com/carts/user/5')
-        .then(response => response.json())
-        .then(data => {
-            //client information section with fetched data
-            const clientInfoDiv = document.getElementById('client-info');
-
-              data.forEach(client => {
-                const clientDiv = document.createElement('div');
-                clientDiv.innerHTML = `
-                    <p>Client Name: ${client.name}</p>
-                    <p>Rep Name: ${client.rep}</p>
-                    <p>Contract Number: ${client.contract}</p>
-                    <p>Amount: ${client.amount}</p>
-                    <hr>
+            <tr>
+              <th scope="row">${client.name}</th>
+              <td>${client.rep}</td>
+              <td>${client.contract}</td>
+              <td>@ ${client.amount}</td>
+            </tr>
+                    
                 `;
-                clientInfoDiv.appendChild(clientDiv);
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
+      clientInfoDiv.appendChild(clientDiv);
+    });
+  })
+  .catch((error) => console.error("Error fetching data:", error));
 
 
+
+
+
+const paymentOptions = document.querySelectorAll('.payment-option');
+
+  paymentOptions.forEach(option => {
+    const radioInput = option.querySelector('input[type="radio"]');
+    
+    radioInput.addEventListener('change', () => {
+      paymentOptions.forEach(otherOption => {
+        otherOption.classList.remove('selected');
+      });
       
+      if (radioInput.checked) {
+        option.classList.add('selected');
+      }
+    });
+
+    if (radioInput.checked) {
+        option.classList.add('selected');
+      }
+  });

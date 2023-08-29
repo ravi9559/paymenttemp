@@ -1,28 +1,56 @@
-      
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #0062FF;
-            color: white;
-            padding: 10px 0;
-        }
-        footer {
-            background-color: #111111;
-            color: #AEAEAE;
-            padding: 20px 0;
-        }
-        .fcta{
-            background-color: #0062FF;
-            color: white;
+body {
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #0062ff;
+  color: white;
+  padding: 10px 0;
+}
+footer {
+  background-color: #111111;
+  color: #aeaeae;
+  padding: 20px 0;
+}
+.fcta {
+  background-color: #0062ff;
+  color: white;
+}
 
-        } 
+.fcta:hover {
+  background-color: #004cc5;
+  color: white;
+}
+
+footer a {
+  color: #aeaeae;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.icon {
+  width: 25px;
+}
+
+form{
+    width: 800px;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
 
 
 
-        .fcta:hover{
-            background-color:  #004CC5;
-            color: white;
+.payment-option.selected {
+    background-color: #343a40;
+    color: white;
+    border-color: #343a40;
+  }
 
-        } 
-       
+.c-container{
+    background-color: #3571ca;
+    width: 850px;
+}
+  
